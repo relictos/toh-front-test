@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "concurrently --kill-others \"cd utils/semantic & gulp build & gulp watch\" \"nuxt --port=8080\"",
     "dev-single": "nuxt --port=8080",
+    "dev-server": "nuxt --port=80",
     "dev-debug": "node --inspect node_modules/nuxt/bin/nuxt",
     "build-semantic": "cd utils/semantic & gulp build",
     "build": "npm run build-semantic & nuxt build",
