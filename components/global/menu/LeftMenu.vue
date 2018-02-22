@@ -1,0 +1,186 @@
+<template>
+    <div>
+        <transition name="slide">
+            <div v-if="active" class="main-menu-wrapper active">
+                <div class="ui container">
+                    <div class="main-menu-nav">
+                        <main-menu-item text="На главную" icon="home"></main-menu-item>
+                        <main-menu-item text="Поиск игроков" icon="gamepad" :active="true"></main-menu-item>
+                        <main-menu-item text="Кланы" icon="clan"></main-menu-item>
+                    </div>
+                </div>
+            
+            </div>
+        </transition>
+        <div class="left-menu-toggle-container" :class="{'active': active}">
+            <div class="left-menu-toggle" @click="toggleMenu">
+                <span class="toggle-icon-wrapper">
+                    <i class="icon-inline bars toggle-icon"></i> 
+                </span>
+                <span class="toggle-text">Main menu</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style lang="less">
+    .left-menu-toggle-container{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .left-menu-toggle-container .left-menu-toggle{
+        color: fade(@tohDarkText, 80%);
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .left-menu-toggle-container .left-menu-toggle:hover{
+        color: @tohDarkText;
+    }
+
+    .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper{
+        margin-right: 10px;
+        border-radius: 100%;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper:hover{
+        background-color: fade(@tohDarkText, 7%)
+    }
+
+    .left-menu-toggle-container .left-menu-toggle .toggle-icon{
+        font-size: 55px;
+        background-color: fade(@tohDarkText, 80%);
+    }
+
+    .left-menu-toggle-container .left-menu-toggle:hover .toggle-icon{
+        color: @tohDarkText;
+    }
+
+    .left-menu-toggle-container .left-menu-toggle .toggle-text{
+        font-size: 25px;
+        line-height: 35px;
+        transition: .3s;
+        cursor: pointer;
+    }
+    
+    .left-menu-toggle-container.active .toggle-icon-wrapper{
+        background-color: @tohDarkText;
+    }
+
+    .left-menu-toggle-container.active .toggle-icon{
+        background-color: @tohDarkBg;
+    }
+
+    .left-menu-toggle-container.active .toggle-text{
+        opacity: 0;
+        cursor: inherit;
+        pointer-events: none;
+    }
+
+    .main-menu-nav{
+      display: flex;
+      flex-flow: row wrap;
+      align-items: stretch;
+      margin: -1rem;
+      margin-bottom: 0px;
+      padding-top: 40px;
+    }
+
+    .main-menu-nav .nav-item{
+      padding: 1rem;
+      flex-direction: column;
+      vertical-align: top;
+      align-self: top!important;
+      width: 33.3%;
+
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 35px;
+      transition: .3s;
+
+      cursor: pointer;
+    }
+
+    .main-menu-nav .nav-item:hover{
+        background-color: fade(@tohDarkText, 7%)
+    }
+
+    .main-menu-nav .nav-item .nav-item-icon-container{
+      text-align: right;
+      flex-direction: column;
+      vertical-align: top;
+      align-self: top!important;
+      font-size: 40px;
+    }
+
+    .main-menu-nav .nav-item .nav-item-icon-container .icon-inline{
+      background-color: fade(@tohDarkText, 80%);
+    }
+
+    .main-menu-nav .nav-item:hover .nav-item-icon-container .icon-inline{
+        background-color: @tohDarkText;
+    }
+
+    .main-menu-nav .nav-item .nav-item-text{
+      text-align: left;
+      flex-direction: column;
+      vertical-align: top;
+      align-self: top!important;
+      color: fade(@tohDarkText, 80%);
+      font-size: 30px;
+      line-height: 42px;
+      padding-left: 20px;
+    }
+
+    .main-menu-nav .nav-item:hover .nav-item-text{
+        color: @tohDarkText;
+    }
+
+    .main-menu-nav .nav-item:nth-child(3n-1){
+      padding-left: 5%;
+    }
+    .main-menu-nav .nav-item:nth-child(3n){
+      padding-left: 15%;
+    }
+
+    .main-menu-nav .nav-item.active .nav-item-icon-container .icon-inline{
+      background-color: @tohPrimaryColor;
+    }
+
+    .main-menu-nav .nav-item.active:hover .nav-item-icon-container .icon-inline{
+        background-color: darken(@tohPrimaryColor, 5%)
+    }
+
+    .main-menu-nav .nav-item.active .nav-item-text{
+      color: @tohPrimaryColor;
+    }
+
+    .main-menu-nav .nav-item.active:hover .nav-item-text{
+      color: darken(@tohPrimaryColor, 5%);
+    }
+</style>
+
+<script>
+    import MainMenuItem from '~/components/global/menu/MainMenuItem'
+
+    export default {
+        name: 'LeftMenu',
+        data() {
+            return {
+                'active': false
+            }
+        },
+        methods: {
+            toggleMenu: function(){
+                this.active = !this.active
+            }
+        },
+        components: {
+            MainMenuItem
+        }
+    }
+</script>

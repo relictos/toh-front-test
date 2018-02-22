@@ -1,0 +1,43 @@
+{
+  "name": "nuxtclient",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "relictos <relictos@mail.ru>",
+  "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "80"
+    }
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others \"cd utils/semantic & gulp build & gulp watch\" \"nuxt --port=8080\"",
+    "dev-single": "nuxt --port=8080",
+    "dev-debug": "node --inspect node_modules/nuxt/bin/nuxt",
+    "build-semantic": "cd utils/semantic & gulp build",
+    "build": "npm run build-semantic & nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.1.0",
+    "axios": "^0.17.1",
+    "js-cookie": "^2.2.0",
+    "less-loader": "^4.0.5",
+    "nuxt": "^1.0.0",
+    "semantic-ui-vue": "^0.1.10",
+    "vform": "^0.8.2",
+    "vue-i18n": "^7.4.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "semantic-ui": "^2.3.0",
+    "style-resources-loader": "^1.0.0"
+  }
+}

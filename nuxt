@@ -1,0 +1,27 @@
+[0] [18:19:40] Using gulpfile D:\OpenServer\domains\nuxtclient\utils\semantic\gulpfile.js
+[0] [18:19:40] Starting 'build'...
+[0] Building Semantic
+[0] [18:19:40] Starting 'build-javascript'...
+[0] Building Javascript
+[0] [18:19:40] Starting 'build-css'...
+[0] Building CSS
+[0] [18:19:40] Starting 'build-assets'...
+[0] Building assets
+[0] [18:19:41] Created: dist\components\site.js
+[0] [18:19:41] Created: dist\components\site.min.js
+[0] [18:19:41] Created: dist\components\form.js
+[0] [18:19:41] Created: dist\components\form.min.js
+[0] [18:19:41] Created: dist\components\accordion.js
+[0] [18:19:41] Created: dist\components\checkbox.js
+[0] [18:19:42] Created: dist\components\accordion.min.js
+[0] [18:19:42] Created: dist\components\dimmer.js
+[0] [18:19:42] Created: dist\components\checkbox.min.js
+[0] [18:19:42] Created: dist\components\dimmer.min.js
+[0] [18:19:42] Created: dist\components\dropdown.js
+[0] [18:19:42] Created: dist\components\dropdown.min.js
+[0] [18:19:42] Created: dist\components\embed.js
+[0] [18:19:42] Created: dist\components\reset.min.css
+[0] [18:19:42] Created: dist\components\reset.css
+[0] [18:19:42] Created: dist\components\embed.min.js
+[0] [18:19:42] Created: dist\components\modal.js
+[0] ^C�������� �믮������ ����⭮�� 䠩�� [Y(��)/N(���)]? cd utils/semantic & gulp build & gulp watch exited with code 1

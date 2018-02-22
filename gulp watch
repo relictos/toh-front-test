@@ -1,0 +1,169 @@
+[0] [18:18:35] Using gulpfile D:\OpenServer\domains\nuxtclient\utils\semantic\gulpfile.js
+[0] [18:18:35] Starting 'build'...
+[0] Building Semantic
+[0] [18:18:35] Starting 'build-javascript'...
+[0] Building Javascript
+[0] [18:18:35] Starting 'build-css'...
+[0] Building CSS
+[0] [18:18:35] Starting 'build-assets'...
+[0] Building assets
+[0] [18:18:36] Created: dist\components\site.js
+[0] [18:18:36] Created: dist\components\form.js
+[0] [18:18:36] Created: dist\components\site.min.js
+[0] [18:18:36] Created: dist\components\accordion.js
+[0] [18:18:36] Created: dist\components\form.min.js
+[0] [18:18:36] Created: dist\components\checkbox.js
+[0] [18:18:37] Created: dist\components\accordion.min.js
+[0] [18:18:37] Created: dist\components\dimmer.js
+[0] [18:18:37] Created: dist\components\checkbox.min.js
+[0] [18:18:37] Created: dist\components\dropdown.js
+[0] [18:18:37] Created: dist\components\dimmer.min.js
+[0] [18:18:37] Created: dist\components\embed.js
+[0] [18:18:38] Created: dist\components\dropdown.min.js
+[0] [18:18:38] Created: dist\components\reset.min.css
+[0] [18:18:38] Created: dist\components\reset.css
+[0] [18:18:38] Created: dist\components\modal.js
+[0] [18:18:38] Created: dist\components\embed.min.js
+[0] [18:18:38] Created: dist\components\nag.js
+[0] [18:18:38] Created: dist\components\modal.min.js
+[0] [18:18:38] Created: dist\components\nag.min.js
+[0] [18:18:38] Created: dist\components\popup.js
+[0] [18:18:38] Created: dist\components\progress.js
+[0] [18:18:38] Created: dist\components\popup.min.js
+[0] [18:18:38] Created: dist\components\rating.js
+[0] [18:18:38] Created: dist\components\progress.min.js
+[0] [18:18:38] Created: dist\components\search.js
+[0] [18:18:39] Created: dist\components\rating.min.js
+[0] [18:18:39] Created: dist\components\site.css
+[0] [18:18:39] Created: dist\components\site.min.css
+[0] [18:18:39] Created: dist\components\shape.js
+[0] [18:18:39] Created: dist\components\search.min.js
+[0] [18:18:39] Created: dist\components\sidebar.js
+[0] [18:18:39] Created: dist\components\shape.min.js
+[0] [18:18:39] Created: dist\components\sidebar.min.js
+[0] [18:18:39] Created: dist\components\sticky.js
+[0] [18:18:39] Created: dist\components\tab.js
+[0] [18:18:39] Created: dist\components\sticky.min.js
+[0] [18:18:40] Created: dist\components\transition.js
+[0] [18:18:40] Created: dist\components\tab.min.js
+[0] [18:18:40] Created: dist\components\button.css
+[0] [18:18:40] Finished 'build-assets' after 4.64 s
+[0] [18:18:40] Created: dist\components\transition.min.js
+[0] [18:18:40] Created: dist\components\button.min.css
+[0] [18:18:40] Created: dist\components\api.js
+[0] [18:18:40] Created: dist\components\api.min.js
+[0] [18:18:40] Created: dist\components\state.js
+[0] [18:18:40] Created: dist\components\state.min.js
+[0] [18:18:40] Created: dist\components\visibility.js
+[0] [18:18:40] Created: dist\components\visibility.min.js
+[0] [18:18:40] Starting 'package compressed js'...
+[0] [18:18:40] Starting 'package uncompressed js'...
+[0] [18:18:40] Finished 'build-javascript' after 5.13 s
+[0] [18:18:41] Created: dist\components\container.css
+[0] [18:18:41] Created: dist\components\container.min.css
+[0] [18:18:41] Created: dist\components\divider.css
+[0] [18:18:41] Created: dist\components\divider.min.css
+[0] [18:18:43] Created: dist\semantic.min.js
+[0] [18:18:43] Finished 'package compressed js' after 3.17 s
+[0] [18:18:44] Created: dist\semantic.js
+[0] [18:18:44] Finished 'package uncompressed js' after 3.31 s
+[0] [18:18:44] Created: dist\components\flag.css
+[0] [18:18:44] Created: dist\components\flag.min.css
+[0] [18:18:44] Created: dist\components\header.css
+[18:18:44] Created: dist\components\header.min.css
+[0] [18:18:44] Created: dist\components\icon.css
+[18:18:44] Created: dist\components\icon.min.css
+[0] [18:18:44] Created: dist\components\image.css
+[0] [18:18:44] Created: dist\components\image.min.css
+[0] [18:18:44] Created: dist\components\input.min.css
+[0] [18:18:44] Created: dist\components\input.css
+[0] [18:18:44] Created: dist\components\label.min.css
+[0] [18:18:44] Created: dist\components\label.css
+[0] [18:18:45] Created: dist\components\list.min.css
+[0] [18:18:45] Created: dist\components\list.css
+[0] [18:18:45] Created: dist\components\loader.min.css
+[0] [18:18:45] Created: dist\components\loader.css
+[0] [18:18:45] Created: dist\components\rail.css
+[0] [18:18:45] Created: dist\components\rail.min.css
+[0] [18:18:45] Created: dist\components\reveal.css
+[0] [18:18:45] Created: dist\components\reveal.min.css
+[0] [18:18:45] Created: dist\components\segment.css
+[0] [18:18:45] Created: dist\components\segment.min.css
+[0] [18:18:45] Created: dist\components\step.css
+[0] [18:18:45] Created: dist\components\step.min.css
+[0] [18:18:45] Created: dist\components\breadcrumb.css
+[0] [18:18:45] Created: dist\components\breadcrumb.min.css
+[0] [18:18:45] Created: dist\components\form.css
+[0] [18:18:45] Created: dist\components\form.min.css
+[0] [18:18:45] Created: dist\components\grid.css
+[0] [18:18:45] Created: dist\components\grid.min.css
+[0] [18:18:45] Created: dist\components\menu.css
+[0] [18:18:45] Created: dist\components\menu.min.css
+[0] [18:18:45] Created: dist\components\message.min.css
+[0] [18:18:45] Created: dist\components\message.css
+[0] [18:18:46] Created: dist\components\table.css
+[0] [18:18:46] Created: dist\components\table.min.css
+[0] [18:18:46] Created: dist\components\ad.css
+[18:18:46] Created: dist\components\ad.min.css
+[0] [18:18:46] Created: dist\components\card.min.css
+[0] [18:18:46] Created: dist\components\card.css
+[0] [18:18:46] Created: dist\components\comment.min.css
+[18:18:46] Created: dist\components\comment.css
+[0] [18:18:46] Created: dist\components\feed.css
+[0] [18:18:46] Created: dist\components\feed.min.css
+[0] [18:18:46] Created: dist\components\item.css
+[0] [18:18:46] Created: dist\components\item.min.css
+[0] [18:18:46] Created: dist\components\statistic.min.css
+[0] [18:18:46] Created: dist\components\statistic.css
+[0] [18:18:46] Created: dist\components\accordion.min.css
+[0] [18:18:46] Created: dist\components\accordion.css
+[0] [18:18:46] Created: dist\components\checkbox.min.css
+[0] [18:18:46] Created: dist\components\checkbox.css
+[0] [18:18:46] Created: dist\components\dimmer.css
+[0] [18:18:46] Created: dist\components\dimmer.min.css
+[0] [18:18:46] Created: dist\components\dropdown.min.css
+[0] [18:18:46] Created: dist\components\dropdown.css
+[0] [18:18:46] Created: dist\components\embed.css
+[0] [18:18:46] Created: dist\components\embed.min.css
+[0] [18:18:46] Created: dist\components\modal.min.css
+[0] [18:18:46] Created: dist\components\modal.css
+[0] [18:18:46] Created: dist\components\nag.css
+[18:18:46] Created: dist\components\nag.min.css
+[0] [18:18:46] Created: dist\components\popup.css
+[0] [18:18:46] Created: dist\components\popup.min.css
+[0] [18:18:47] Created: dist\components\progress.min.css
+[0] [18:18:47] Created: dist\components\progress.css
+[0] [18:18:47] Created: dist\components\rating.css
+[0] [18:18:47] Created: dist\components\rating.min.css
+[0] [18:18:47] Created: dist\components\search.css
+[0] [18:18:47] Created: dist\components\search.min.css
+[0] [18:18:47] Created: dist\components\shape.css
+[0] [18:18:47] Created: dist\components\shape.min.css
+[0] [18:18:47] Created: dist\components\sidebar.css
+[0] [18:18:47] Created: dist\components\sidebar.min.css
+[0] [18:18:47] Created: dist\components\sticky.css
+[0] [18:18:47] Created: dist\components\sticky.min.css
+[0] [18:18:47] Created: dist\components\tab.css
+[0] [18:18:47] Created: dist\components\tab.min.css
+[0] [18:18:47] Created: dist\components\transition.min.css
+[0] [18:18:47] Starting 'package compressed css'...
+[0] [18:18:47] Created: dist\components\transition.css
+[0] [18:18:47] Starting 'package uncompressed css'...
+[0] [18:18:53] Created: dist\semantic.min.css
+[0] [18:18:53] Finished 'package compressed css' after 5.88 s
+[0] [18:18:53] Created: dist\semantic.css
+[0] [18:18:53] Finished 'package uncompressed css' after 5.88 s
+[0] [18:18:53] Finished 'build-css' after 18 s
+[0] [18:18:53] Finished 'build' after 18 s
+[0] 2018-02-20T13:18:56.145Z nuxt:build App root: D:\OpenServer\domains\nuxtclient
+[0] 2018-02-20T13:18:56.147Z nuxt:build Generating D:\OpenServer\domains\nuxtclient\.nuxt files...
+[0] 2018-02-20T13:18:56.201Z nuxt:build Generating files...
+[0] 2018-02-20T13:18:56.213Z nuxt:build Generating routes...
+[0] 2018-02-20T13:18:56.268Z nuxt:build Building files...
+[0] 2018-02-20T13:18:57.676Z nuxt:build Adding webpack middleware...
+[0]  DONE  Compiled successfully in -2309ms18:19:06
+[0] 
+[0] 
+[0]  OPEN  http://localhost:8080
+[0] 
+[0] �������� �믮������ ����⭮�� 䠩�� [Y(��)/N(���)]? cd utils/semantic & gulp build & cd ../.. & nuxt exited with code 1
