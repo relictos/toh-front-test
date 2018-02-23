@@ -46,6 +46,7 @@
         transition: .3s;
         cursor: pointer;
         padding: 10px;
+        outline: none;
     }
 
     .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper:hover{

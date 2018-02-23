@@ -2,15 +2,15 @@
     <div class="main-menu-block">
       <div class="ui container main-menu-container">
         <div class="ui grid">
-          <div class="middle aligned six wide column">
+          <div class="middle aligned five wide tablet five wide mobile six wide computer column">
             <transition name="fade">
               <left-menu></left-menu>
             </transition>
           </div>
-          <div class="middle aligned center aligned four wide column">
+          <div class="middle aligned center aligned six wide tablet six wide mobile four wide computer column">
             <img class="main-menu-logo" src="~assets/img/logo_toh.png">
           </div>
-          <div class="middle aligned right aligned six wide column">
+          <div class="middle aligned right aligned five wide tablet five wide mobile six wide computer column">
             <right-menu></right-menu>
           </div>
         </div>
@@ -60,7 +60,7 @@
         color: @tohLightText;
         position: fixed;
         bottom: 0px;
-        top: 100px;
+        top: 120px;
         overflow-y: auto;
       }
     }
