@@ -8,12 +8,31 @@
 @basicBorderRadius: @tohButtonBorderRadius;
 @defaultBorderRadius: @tohButtonBorderRadius;
 @fontName: @tohFontName;
-@largeMonitorBreakpoint: 1250px;
+
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 992px;
+@computerBreakpoint          : 992px;
+@largeMonitorBreakpoint      : 1250px;
+@widescreenMonitorBreakpoint : 1920px;
+
+@largestMobileScreen : (@tabletBreakpoint - 1px);
+@largestTabletScreen : (@computerBreakpoint - 1px);
+@largestSmallMonitor : (@largeMonitorBreakpoint - 1px);
+@largestLargeMonitor : (@widescreenMonitorBreakpoint - 1px);
 
 //Site Variables
 @tohFontName: 'Segoe UI';
 
 @tohDarkBg: #171E2E;
 @tohDarkText: #fff;
+
+@tohLightBg: #fff;
+@tohLightText: #171E2E;
+
 @tohPrimaryColor: #00ABFF; //Primary color
+@tohLightPrimaryColor: #D4F1FF;
+
+@tohGreyColor: #BFC1C5;
+@tohLightGreyColor: #E7E7E7;
+
 @tohButtonBorderRadius: 2px;

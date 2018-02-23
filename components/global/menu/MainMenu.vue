@@ -48,9 +48,21 @@
       background: @tohDarkBg;
       display: none;
       z-index: 100;
+      color: @tohDarkText;
     }
     .main-menu-wrapper.active{
       display: block;
+    }
+
+    @media only screen and (max-width : @largestMobileScreen) {
+      .main-menu-wrapper{
+        background-color: @tohLightBg;
+        color: @tohLightText;
+        position: fixed;
+        bottom: 0px;
+        top: 100px;
+        overflow-y: auto;
+      }
     }
 </style>
 

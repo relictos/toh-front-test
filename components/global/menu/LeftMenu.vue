@@ -45,6 +45,7 @@
         border-radius: 100%;
         transition: .3s;
         cursor: pointer;
+        padding: 10px;
     }
 
     .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper:hover{
@@ -69,6 +70,10 @@
     
     .left-menu-toggle-container.active .toggle-icon-wrapper{
         background-color: @tohDarkText;
+    }
+
+    .left-menu-toggle-container.active .toggle-icon-wrapper:hover{
+        background-color: fade(@tohDarkText, 80%)
     }
 
     .left-menu-toggle-container.active .toggle-icon{
@@ -162,6 +167,56 @@
     .main-menu-nav .nav-item.active:hover .nav-item-text{
       color: darken(@tohPrimaryColor, 5%);
     }
+
+    @media only screen and (max-width : @largestMobileScreen) {
+        .left-menu-toggle-container .toggle-text{
+            display: none;
+        }
+        
+        .main-menu-nav{
+            min-height: 100%;
+            padding: 0px;
+            margin: 0px -1rem;
+        }
+
+        .main-menu-nav .nav-item{
+            width: 100%;
+            padding: 20px !important;
+            margin-bottom: 0px;
+            border-bottom: 1px solid @tohLightGreyColor;
+        }
+
+        .main-menu-nav .nav-item.active{
+            border-bottom-color: @tohLightPrimaryColor;
+        }
+
+        .main-menu-nav .nav-item:hover{
+            background-color: fade(@tohLightText, 7%);
+        }
+
+        .main-menu-nav .nav-item .nav-item-text{
+            color: fade(@tohLightText, 80%);
+            font-size: 19px;
+            line-height: 33px;
+        }
+
+        .main-menu-nav .nav-item:hover .nav-item-text{
+            color: @tohLightText;
+        }
+
+        .main-menu-nav .nav-item .nav-item-icon-container{
+            font-size: 33px;
+            line-height: 33px;
+        }
+
+        .main-menu-nav .nav-item .nav-item-icon-container .icon-inline{
+            background-color: @tohGreyColor;
+        }
+
+        .main-menu-nav .nav-item:hover .nav-item-icon-container .icon-inline{
+            background-color: @tohGreyColor;
+        }
+    }
 </style>
 
 <script>
@@ -176,7 +231,15 @@
         },
         methods: {
             toggleMenu: function(){
+                if(document.body.classList.contains("mobile-modal") && !this.active)
+                    return;
+
                 this.active = !this.active
+
+                if(this.active)
+                    document.body.classList.add("mobile-modal")
+                else
+                    document.body.classList.remove("mobile-modal")
             }
         },
         components: {
