@@ -95,9 +95,11 @@
         margin-right: 0px;
     }
 
-    .left-menu-toggle-container.mini .left-menu-toggle .toggle-icon-wrapper{
-        margin-right: 2px;
-        padding: 8px;
+    @media only screen and (max-width : @largestMobileScreen) {
+        .left-menu-toggle-container.mini .left-menu-toggle .toggle-icon-wrapper{
+            margin-right: 2px;
+            padding: 8px;
+        }
     }
 
     .left-menu-toggle-container.mini .left-menu-toggle .toggle-icon{
