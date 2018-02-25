@@ -2,12 +2,12 @@
     display: inline-block;
     width: 1em;
     height: 1em;
-    margin-top: 2px;
+    margin-top: 0.1rem;
     background: 0 0 no-repeat;
     background-size: auto 100%;
     vertical-align: top;
     text-transform: uppercase;
-    mask: no-repeat;
+    mask: no-repeat center center;
     mask-size: contain;
 }
 
@@ -17,8 +17,14 @@
 
 .icon-inline.login{
     mask-image: url(~assets/svg/login.svg);
-    width: 0.7em;
-    height: 0.7em;
+    margin-right: 0.2rem;
+}
+
+.icon-inline.reg{
+    mask-image: url(~assets/svg/reg.svg);
+    margin-top: .3rem;
+    margin-left: .15rem;
+    margin-right: .15rem;
 }
 
 .icon-inline.home{

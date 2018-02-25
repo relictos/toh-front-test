@@ -15,10 +15,17 @@
             
             </div>
         </transition>
-        <div class="mobile-only left-menu-toggle-container" :class="{'active': active}">
+        <div class="mobile-only left-menu-toggle-container mini" :class="{'active': loginActive}">
             <div class="left-menu-toggle" @click="toggleMenu">
                 <span class="toggle-icon-wrapper">
                     <i class="icon-inline login toggle-icon"></i> 
+                </span>
+            </div>
+        </div>
+        <div class="mobile-only left-menu-toggle-container mini" :class="{'active': regActive}">
+            <div class="left-menu-toggle" @click="toggleMenu">
+                <span class="toggle-icon-wrapper">
+                    <i class="icon-inline reg toggle-icon"></i> 
                 </span>
             </div>
         </div>

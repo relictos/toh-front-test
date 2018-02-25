@@ -25,7 +25,7 @@
 
 <style lang="less">
     .left-menu-toggle-container{
-        display: flex;
+        display: inline-flex;
         flex-flow: row nowrap;
     }
 
@@ -85,6 +85,23 @@
         opacity: 0;
         cursor: inherit;
         pointer-events: none;
+    }
+
+    .left-menu-toggle-container.mini{
+        margin-right: 0px;
+    }
+
+    .left-menu-toggle-container.mini .left-menu-toggle{
+        margin-right: 0px;
+    }
+
+    .left-menu-toggle-container.mini .left-menu-toggle .toggle-icon-wrapper{
+        margin-right: 2px;
+        padding: 8px;
+    }
+
+    .left-menu-toggle-container.mini .left-menu-toggle .toggle-icon{
+        font-size: 23px;
     }
 
     .main-menu-nav{

@@ -17,17 +17,15 @@ body.mobile-modal{
     overflow: hidden;
 }
 
-.mobile-only{
-    display: none !important;
+@media only screen and (min-width : @tabletBreakpoint) {
+    .mobile-only{
+        display: none !important;
+    }
 }
 
 @media only screen and (max-width : @largestMobileScreen) {
     body{
         background: @tohDarkBg;
-    }
-
-    .mobile-only{
-        display: block !important;
     }
 
     .mobile-hidden{
