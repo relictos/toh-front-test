@@ -6,18 +6,19 @@
 }
 
 .slide-enter-active {
-    transition: max-height .7s ease-in;
+    transition: max-height .3s ease-in;
     max-height: 1500px;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 .slide-leave-active{
     transition: max-height .3s ease-out;
     max-height: 1500px;
     
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
     max-height: 0px;
     padding: 0px;
+    overflow: hidden;
 }
