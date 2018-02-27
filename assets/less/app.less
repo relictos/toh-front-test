@@ -12,11 +12,6 @@
     font-style: normal;
 }
 
-//For mobile-only modal windows (like menu)
-body.mobile-modal{
-    overflow: hidden;
-}
-
 @media only screen and (min-width : @tabletBreakpoint) {
     .mobile-only{
         display: none !important;
@@ -26,6 +21,11 @@ body.mobile-modal{
 @media only screen and (max-width : @largestMobileScreen) {
     body{
         background: @tohDarkBg;
+    }
+
+    //For mobile-only modal windows (like menu)
+    body.mobile-modal{
+        overflow: hidden;
     }
 
     .mobile-hidden{

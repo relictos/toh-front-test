@@ -54,6 +54,11 @@
       display: block;
     }
 
+    .main-menu-wrapper .form-wrapper{
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
     @media only screen and (max-width : @largestMobileScreen) {
       .main-menu-wrapper{
         background-color: @tohLightBg;

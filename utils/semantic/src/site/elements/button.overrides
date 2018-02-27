@@ -6,6 +6,20 @@
   box-shadow: 0 0 !important;
 }
 
+.ui.button.primary.link, .ui.button.primary.link:hover, .ui.button.primary.link:focus {
+  box-shadow: 0 0 !important;
+}
+
+.ui.button.primary.link{
+  color: @primaryColor;
+  background-color: transparent;
+  font-weight: normal;
+}
+.ui.button.primary.link:hover{
+  color: @primaryColorHover;
+  background-color: @transparentPrimary !important;
+}
+
 .ui.basic.inverted.button.link:hover, .ui.basic.inverted.buttons .button.link:hover{
   background-color: @transparentWhite !important;
 }
@@ -13,4 +27,15 @@
 .ui.basic.inverted.buttons .button.link:active,
 .ui.basic.inverted.button.link:active {
   background-color: @strongTransparentWhite !important;
+}
+
+.ui.basic.inverted.buttons .button.link.active,
+.ui.basic.inverted.button.link.active{
+  border: 0px;
+  box-shadow: none !important;
+  background-color: @transparentWhite !important;
+
+  &:hover{
+    background-color: @strongTransparentWhite !important;
+  }
 }
