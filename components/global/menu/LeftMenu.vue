@@ -27,6 +27,7 @@
     .left-menu-toggle-container{
         display: inline-flex;
         flex-flow: row nowrap;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
 
     .left-menu-toggle-container .left-menu-toggle{
@@ -34,6 +35,7 @@
         margin-right: 10px;
         display: flex;
         align-items: center;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
 
     .left-menu-toggle-container .left-menu-toggle:hover{
