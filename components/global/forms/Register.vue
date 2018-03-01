@@ -2,11 +2,21 @@
   <div>
     <sui-form-field>
         <label>Login</label>
-        <input v-model="form.login" type="text" name="login" placeholder="Pass your login here"/>
+        <input type="text" name="login" placeholder="Pass your login here">
     </sui-form-field>
     <sui-form-field>
         <label>Password</label>
-        <input v-model="form.pass" type="password" name="password" placeholder="Password">
+        <input type="password" name="password" placeholder="Password">
+    </sui-form-field>
+    <sui-form-field>
+      <label>Country</label>
+      <sui-dropdown
+            fluid
+            placeholder="Select Friend"
+            selection
+            :options="this.$store.getters['formdata/countries']"
+            v-model="form.country"
+        />
     </sui-form-field>
     <sui-button size="big" primary type="submit">Sign in</sui-button>
     <a is="sui-button" primary size="big" class="link">Forgot your password?</a>
@@ -24,10 +34,9 @@
 export default {
   data() {
     return {
-        form: {
-            login: null,
-            pass: null
-        }
+      form: {
+          country: null
+      }
     };
   }
 }

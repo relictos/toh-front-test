@@ -2,3 +2,4 @@
     User Variable Overrides
 *******************************/
 @import "../../../../../assets/less/variables.less";
+@labelFontWeight: normal;

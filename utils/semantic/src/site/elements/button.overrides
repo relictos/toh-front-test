@@ -39,3 +39,17 @@
     background-color: @strongTransparentWhite !important;
   }
 }
+
+.ui.basic.primary.buttons .active.button,
+.ui.basic.primary.active.button {
+  background: @primaryColor !important;
+  color: @white !important;
+
+  &:hover{
+    background: @primaryColorHover;
+  }
+}
+.ui.basic.primary.buttons .button:active,
+.ui.basic.primary.button:active {
+  color: @white !important;
+}

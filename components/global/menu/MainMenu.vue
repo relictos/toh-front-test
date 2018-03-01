@@ -4,14 +4,20 @@
         <div class="ui grid">
           <div class="middle aligned five wide tablet five wide mobile six wide computer column">
             <transition name="fade">
-              <left-menu></left-menu>
+              <left-menu :active.sync="active.menu" @toggle="toggleActive(active.menu)"></left-menu>
             </transition>
           </div>
           <div class="middle aligned center aligned six wide tablet six wide mobile four wide computer column">
             <img class="main-menu-logo" src="~assets/img/logo_toh.png">
           </div>
           <div class="middle aligned right aligned five wide tablet five wide mobile six wide computer column">
-            <right-menu></right-menu>
+            <right-menu 
+              :activeLogin.sync="active.login" 
+              :activeReg.sync="active.reg" 
+              @toggleLogin="toggleActive(active.login)"
+              @toggleReg="toggleActive(active.reg)"
+            >
+            </right-menu>
           </div>
         </div>
       </div>
@@ -77,6 +83,27 @@ import RightMenu from '~/components/global/menu/RightMenu.vue'
 
 export default {
   name: 'MainMenu',
+  data() {
+    return {
+      active: {
+        menu: false,
+        login: false,
+        reg: false
+      }
+    }
+  },
+  methods: {
+    toggleActive: function(active){
+      if(!active)
+        document.body.classList.add("mobile-modal")
+      else
+        document.body.classList.remove("mobile-modal")
+
+      this.active.menu = false;
+      this.active.login = false;
+      this.active.reg = false;
+    }
+  },
   components: {
     LeftMenu,
     RightMenu

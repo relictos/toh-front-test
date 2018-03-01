@@ -125,13 +125,12 @@
       display: flex;
       flex-flow: row nowrap;
       margin-bottom: 35px;
-      transition: .3s;
 
       cursor: pointer;
     }
 
     .main-menu-nav .nav-item:hover{
-        background-color: fade(@tohDarkText, 7%)
+        //
     }
 
     .main-menu-nav .nav-item .nav-item-icon-container{
@@ -144,6 +143,7 @@
 
     .main-menu-nav .nav-item .nav-item-icon-container .icon-inline{
       background-color: fade(@tohDarkText, 80%);
+      transition: all .3s;
     }
 
     .main-menu-nav .nav-item:hover .nav-item-icon-container .icon-inline{
@@ -159,6 +159,7 @@
       font-size: 30px;
       line-height: 42px;
       padding-left: 20px;
+      transition: all .3s;
     }
 
     .main-menu-nav .nav-item:hover .nav-item-text{
@@ -177,7 +178,7 @@
     }
 
     .main-menu-nav .nav-item.active:hover .nav-item-icon-container .icon-inline{
-        background-color: darken(@tohPrimaryColor, 5%)
+        background-color: @tohPrimaryHover
     }
 
     .main-menu-nav .nav-item.active .nav-item-text{
@@ -185,7 +186,7 @@
     }
 
     .main-menu-nav .nav-item.active:hover .nav-item-text{
-      color: darken(@tohPrimaryColor, 5%);
+      color: @tohPrimaryHover;
     }
 
     @media only screen and (max-width : @largestMobileScreen) {
@@ -244,22 +245,12 @@
 
     export default {
         name: 'LeftMenu',
-        data() {
-            return {
-                'active': false
-            }
-        },
+        props: ['active'],
         methods: {
             toggleMenu: function(){
-                if(document.body.classList.contains("mobile-modal") && !this.active)
-                    return;
-
+                this.$emit('toggle');
                 this.active = !this.active
-
-                if(this.active)
-                    document.body.classList.add("mobile-modal")
-                else
-                    document.body.classList.remove("mobile-modal")
+                this.$emit('update:active', this.active)
             }
         },
         components: {
