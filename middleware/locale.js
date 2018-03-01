@@ -30,6 +30,9 @@ export default async function ({ isHMR, app, store, route, params, error, redire
         if(!fb_locale)
           fb_locale = process.env.appLocale
         
+        if(route.fullPath.split('/')[1] == 'dist')
+          return;
+
         //Чтобы не было циклического редиректа
         if(locales.indexOf(route.fullPath.split('/')[1]) >= 0)
         {
