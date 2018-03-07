@@ -3,7 +3,10 @@ import Cookies from 'js-cookie'
 // state
 export const state = () => ({
   locale: 'ru',
-  locales: ['en', 'ru']
+  locales: {
+    'en': {'flag': 'us', 'name': 'English'}, 
+    'ru': {'flag': 'ru', 'name': 'Русский'}
+  }
 })
 
 // getters

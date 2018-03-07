@@ -1,9 +1,8 @@
 {
-    "links": {
-      "home": "Home",
-      "about": "About",
-      "english": "English version",
-      "french": "French version"
+    "menu": {
+      "home": "Main page",
+      "players": "Players search",
+      "teams": "Teams"
     },
     "home": {
       "title": "Welcome",

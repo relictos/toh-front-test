@@ -4,9 +4,9 @@
             <div v-if="active" class="main-menu-wrapper active">
                 <div class="ui container">
                     <div class="main-menu-nav">
-                        <main-menu-item text="На главную" icon="home"></main-menu-item>
-                        <main-menu-item text="Поиск игроков" icon="gamepad" :active="true"></main-menu-item>
-                        <main-menu-item text="Кланы" icon="clan"></main-menu-item>
+                        <main-menu-item :text="$t('main.menu.home')" icon="home"></main-menu-item>
+                        <main-menu-item :text="$t('main.menu.players')" icon="gamepad" :active="true"></main-menu-item>
+                        <main-menu-item :text="$t('main.menu.teams')" icon="clan"></main-menu-item>
                     </div>
                 </div>
             
@@ -18,6 +18,13 @@
                     <i class="icon-inline bars toggle-icon"></i> 
                 </span>
                 <span class="toggle-text">Main menu</span>
+            </div>
+            <div class="left-menu-lang-select">
+                <sui-dropdown :text="$store.getters['lang/locale']">
+                    <sui-dropdown-menu>
+                        <sui-dropdown-item v-for="loc in $store.getters['lang/locales']" :key="loc.name" :flag="loc.flag">{{ loc.name }}</sui-dropdown-item>
+                    </sui-dropdown-menu>
+                </sui-dropdown>
             </div>
         </div>
     </div>
@@ -57,11 +64,12 @@
 
     .left-menu-toggle-container .left-menu-toggle .toggle-icon{
         font-size: 55px;
+        transition: .3s;
         background-color: fade(@tohDarkText, 80%);
     }
 
     .left-menu-toggle-container .left-menu-toggle:hover .toggle-icon{
-        color: @tohDarkText;
+        background-color: @tohDarkText;
     }
 
     .left-menu-toggle-container .left-menu-toggle .toggle-text{
@@ -80,6 +88,10 @@
     }
 
     .left-menu-toggle-container.active .toggle-icon{
+        background-color: fade(@tohDarkBg, 80%);
+    }
+
+    .left-menu-toggle-container.active .left-menu-toggle:hover .toggle-icon{
         background-color: @tohDarkBg;
     }
 
@@ -108,6 +120,47 @@
         font-size: 23px;
     }
 
+    .left-menu-toggle-container .left-menu-lang-select{
+        color: fade(@tohGreyColor,50%);
+        font-size: 20px;
+        align-self: center;
+        margin-top: 5px;
+        margin-left: 5px;
+        transition: .3s;
+    }
+
+    .left-menu-toggle-container .left-menu-lang-select:hover{
+        color: @tohGreyColor;
+    }
+
+    .left-menu-toggle-container .left-menu-lang-select .ui.dropdown{
+        color: fade(@tohGreyColor,50%);
+        transition: color .3s;
+    }
+
+    .left-menu-toggle-container .left-menu-lang-select .ui.dropdown.active,
+    .left-menu-toggle-container .left-menu-lang-select .ui.dropdown:hover{
+        color: @tohGreyColor;
+    }
+
+    .left-menu-toggle-container .left-menu-lang-select .ui.dropdown>.dropdown.icon{
+        margin-left: .5em;
+    }
+
+    .left-menu-toggle-container .left-menu-lang-select .ui.dropdown>.text{
+        text-transform: uppercase;
+    }
+
+    .left-menu-toggle-container .left-menu-lang-select .ui.dropdown .menu{
+        margin-top: 10px;
+    }
+
+    .left-menu-toggle-container.active .left-menu-lang-select{
+        opacity: 0;
+        cursor: inherit;
+        pointer-events: none;
+    }
+
     .main-menu-nav{
       display: flex;
       flex-flow: row wrap;
@@ -129,10 +182,6 @@
       margin-bottom: 35px;
 
       cursor: pointer;
-    }
-
-    .main-menu-nav .nav-item:hover{
-        //
     }
 
     .main-menu-nav .nav-item .nav-item-icon-container{
@@ -194,6 +243,19 @@
     @media only screen and (max-width : @largestMobileScreen) {
         .left-menu-toggle-container .toggle-text{
             display: none;
+        }
+
+        .left-menu-toggle-container .left-menu-lang-select{
+            margin: 0px;
+        }
+
+        .left-menu-toggle-container .left-menu-lang-select .ui.dropdown>.dropdown.icon{
+            display: none;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper{
+            margin-right: 0px;
+            padding: 5px;
         }
         
         .main-menu-nav{

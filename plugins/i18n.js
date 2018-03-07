@@ -11,7 +11,7 @@ export default ({ app, store, params, redirect, req, route, error }) => {
   const locale = params.LANG || process.env.appLocale
   const locales = store.getters['lang/locales']
   
-  if (locales.indexOf(locale) === -1) {
+  if (locales[locale] === undefined) {
     return error({ message: 'This pages could not be found.', statusCode: 404 })
   }
 

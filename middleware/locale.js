@@ -34,7 +34,7 @@ export default async function ({ isHMR, app, store, route, params, error, redire
           return;
 
         //Чтобы не было циклического редиректа
-        if(locales.indexOf(route.fullPath.split('/')[1]) >= 0)
+        if(locales[route.fullPath.split('/')[1]] !== undefined)
         {
           return error({ message: 'This pages could not be found.', statusCode: 404 })
         }
