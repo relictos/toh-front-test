@@ -21,9 +21,9 @@ export default async function ({ isHMR, app, store, route, params, error, redire
     // Get locale from params
     const locale = params.LANG || process.env.appLocale
     const locales = store.getters['lang/locales']
-
-    if(!process.SERVER_BUILD)
-    {
+    console.log(locale)
+    // if(!process.SERVER_BUILD)
+    // {
       if(!params.LANG)
       {
         var fb_locale = cookieFromRequest(req, 'locale')
@@ -41,7 +41,15 @@ export default async function ({ isHMR, app, store, route, params, error, redire
 
         return redirect('/' + fb_locale + route.fullPath)
       }
-    }
+      else{
+        //for switching lang
+        if(params.LANG != store.getters['lang/locale'])
+        {
+          app.i18n.locale = locale;
+          store.dispatch('lang/setLoc', { locale })
+        }
+      }
+    //}
 
     if (process.server) {
         const locale = store.getters['lang/locale']

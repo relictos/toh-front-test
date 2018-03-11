@@ -9,7 +9,6 @@
                         <main-menu-item :text="$t('main.menu.teams')" icon="clan"></main-menu-item>
                     </div>
                 </div>
-            
             </div>
         </transition>
         <div class="left-menu-toggle-container" :class="{'active': active}">
@@ -17,14 +16,10 @@
                 <span class="toggle-icon-wrapper">
                     <i class="icon-inline bars toggle-icon"></i> 
                 </span>
-                <span class="toggle-text">Main menu</span>
+                <span class="toggle-text">{{$t('main.menu.title')}}</span>
             </div>
             <div class="left-menu-lang-select">
-                <sui-dropdown :text="$store.getters['lang/locale']">
-                    <sui-dropdown-menu>
-                        <sui-dropdown-item v-for="loc in $store.getters['lang/locales']" :key="loc.name" :flag="loc.flag">{{ loc.name }}</sui-dropdown-item>
-                    </sui-dropdown-menu>
-                </sui-dropdown>
+                <lang-select></lang-select>
             </div>
         </div>
     </div>
@@ -306,6 +301,7 @@
 
 <script>
     import MainMenuItem from '~/components/global/menu/MainMenuItem'
+    import LangSelect from '~/components/global/menu/LangSelect'
 
     export default {
         name: 'LeftMenu',
@@ -318,7 +314,8 @@
             }
         },
         components: {
-            MainMenuItem
+            MainMenuItem,
+            LangSelect
         }
     }
 </script>

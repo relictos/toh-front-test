@@ -53,7 +53,7 @@
       left: 0px;
       background: @tohDarkBg;
       display: none;
-      z-index: 100;
+      z-index: 1001;
       color: @tohDarkText;
     }
     .main-menu-wrapper.active{

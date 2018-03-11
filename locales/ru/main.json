@@ -1,12 +1,12 @@
 {
     "menu": {
-      "title": "Main menu",
-      "home": "Main page",
-      "players": "Players search",
-      "teams": "Teams"
+      "title": "Главное меню",
+      "home": "На главную",
+      "players": "Поиск игроков",
+      "teams": "Команды"
     },
     "home": {
-      "title": "Welcome",
+      "title": "Добро пожаловать",
       "introduction": "This is an introduction in English."
     },
     "about": {
