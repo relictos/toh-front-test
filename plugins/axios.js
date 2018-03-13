@@ -6,6 +6,55 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 export default ({ app, store, redirect }) => {
   axios.defaults.baseURL = process.env.apiUrl
 
+  axios.interceptors.response.use(response => {
+
+    if(process.env.is_debug)
+    {
+      var url = response.config.url
+      var base = response.config.baseURL
+      var path = url.replace(base+'/', '')
+      
+      var test_response = store.getters['debug_data/requests'][path]
+      
+      if(test_response)
+      {
+        test_response = JSON.parse(JSON.stringify(test_response))
+
+        response.data = test_response;
+        response.status = 200;
+        response.statusText = "OK";
+      }
+    }
+
+    return response
+
+  }, error => {
+
+    //Эмуляция ответа сервера при включенном дебаге
+    if(process.env.is_debug)
+    {
+      var response = error.response
+      var url = response.config.url
+      var base = response.config.baseURL
+      var path = url.replace(base+'/', '')
+      
+      var test_response = store.getters['debug_data/requests'][path]
+      
+      if(test_response)
+      {
+        test_response = JSON.parse(JSON.stringify(test_response))
+
+        response.data = test_response;
+        response.status = 200;
+        response.statusText = "OK";
+      }
+
+      return response
+    }
+
+    return Promise.reject(error)
+  })
+
   if (process.server) {
     return
   }

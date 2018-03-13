@@ -163,6 +163,7 @@
       margin: -1rem;
       margin-bottom: 0px;
       padding-top: 40px;
+      padding-left: 15px;
     }
 
     .main-menu-nav .nav-item{
@@ -180,11 +181,12 @@
     }
 
     .main-menu-nav .nav-item .nav-item-icon-container{
-      text-align: right;
+      text-align: center;
       flex-direction: column;
       vertical-align: top;
       align-self: top!important;
       font-size: 40px;
+      width: 45px;
     }
 
     .main-menu-nav .nav-item .nav-item-icon-container .icon-inline{
@@ -287,6 +289,7 @@
         .main-menu-nav .nav-item .nav-item-icon-container{
             font-size: 33px;
             line-height: 33px;
+            width: 35px;
         }
 
         .main-menu-nav .nav-item .nav-item-icon-container .icon-inline{

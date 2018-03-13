@@ -37,7 +37,8 @@ module.exports = {
     apiUrl: process.env.API_URL || 'http://localhost',
     appName: process.env.APP_NAME || 'Nuxt Client',
     appLocale: process.env.APP_LOCALE || 'en',
-    githubAuth: !!process.env.GITHUB_CLIENT_ID || ''
+    githubAuth: !!process.env.GITHUB_CLIENT_ID || '',
+    is_debug: (process.env.DEBUG_ON == "true") ? true : false
   },
 
   head: {

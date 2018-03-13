@@ -15,6 +15,9 @@
         <input v-model="form.password" type="password" name="password" placeholder="Password">
         <has-error :form="form" field="password"/>
     </sui-form-field>
+    <sui-form-field>
+        <sui-checkbox :inputValue="remember" label="Remember me"/>
+    </sui-form-field>
     <sui-button size="big" primary type="submit">Sign in</sui-button>
     <a is="sui-button" primary size="big" class="link">Forgot your password?</a>
     <sui-segment basic align="center">
@@ -50,11 +53,11 @@ export default {
         remember: this.remember
       })
 
+      this.$emit('logged')
       // Fetch the user.
       await this.$store.dispatch('auth/fetchUser')
 
       // Redirect home.
-      console.log(this.$store.getters['auth/user'])
       //this.$router.go(this.$i18n.path(''))
       //this.$router.push({ name: 'home' })
     }
