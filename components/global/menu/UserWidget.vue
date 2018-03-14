@@ -415,6 +415,57 @@
             top: 120px;
             overflow-y: auto;
         }
+
+        .user-top-panel .user-top-dropdown .user-dropdown-info .user-dropdown-name{
+            color: @tohLightText;
+        }
+        .user-top-panel .user-top-dropdown .user-dropdown-info .user-dropdown-subtitle{
+            color: fade(@tohLightText, 70%);
+        }
+
+        .user-top-panel .user-top-dropdown .user-dropdown-info a:hover .user-dropdown-subtitle{
+            color: @tohLightText;
+        }
+
+        .user-top-panel .user-top-dropdown .user-dropdown-info .user-info-icons .icon-inline{
+            background-color: fade(@tohLightText, 40%);
+            transition: .3s;
+
+            &:hover{
+                background-color: @tohLightText;
+            }
+        }
+
+        .user-top-panel .user-top-dropdown .user-dropdown-menu .user-dropdown-menu-item{
+            
+            .item-text{
+                color: fade(@tohLightText, 80%);
+            }
+
+            .item-icon-container .icon-inline{
+                background-color: fade(@tohLightText, 60%);
+            }
+
+            .item-badge{
+                color: fade(@tohLightText, 60%);
+            }
+
+            &:hover{
+                background: fade(@tohLightText, 5%);
+
+                .item-text{
+                    color: @tohLightText;
+                }
+
+                .item-icon-container .icon-inline{
+                    background-color: fade(@tohLightText, 80%);
+                }
+
+                .item-badge{
+                    color: fade(@tohLightText, 80%);
+                }
+            }
+        }
     }
 </style>
 

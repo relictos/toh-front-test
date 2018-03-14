@@ -7,8 +7,8 @@
         <br>
         {{ loc }}
       </h1>
-      <h2 class="subtitle">
-        {{ $store.state }}
+      <h2 class="subtitle" v-for="i in 500" v-bind:key="i">
+        123
       </h2>
       <div class="links">
         <a

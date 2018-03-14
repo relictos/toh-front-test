@@ -69,6 +69,12 @@
     .right-menu-container .ui.loading.form:before{
         background: @tohDarkBg;
     }
+
+    @media only screen and (max-width : @largestMobileScreen) {
+        .right-menu-container .ui.loading.form:before{
+            background: @tohDarkText;
+        }
+    }
 </style>
 
 <script>
