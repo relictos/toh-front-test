@@ -59,12 +59,12 @@
       position: absolute;
       z-index: 0;
       left: 0px;
-      height: 70px;
-      top: 3px;
+      height: 74px;
+      top: 0px;
     }
 
     .main-menu-logo-container .mini-logo-container img.main-menu-mini-logo{
-      height: 69px;
+      height: 74px;
     }
 
     .main-menu-block img.main-menu-logo{
@@ -127,11 +127,11 @@
 
       .main-menu-block{
         *{
-          transition: all 300ms cubic-bezier(0.165,0.840,0.440,1.000);
+          transition: all 300ms cubic-bezier(1.000, 0.840,0.440, 0.165);
         }
 
         .main-menu-logo-container{
-          min-width: 69px;
+          min-width: 70px;
           max-width: 100%;
           transition-delay: 300ms;
         }
@@ -149,7 +149,7 @@
       .main-menu-block.minified{
         .main-menu-logo-container{
           //animation: logo-container-slide .3s linear forwards 0s;
-          max-width: 69px;
+          max-width: 75px;
           transition-delay: .00ms;
         }
 
@@ -274,7 +274,7 @@ export default {
       else{
           this.minified = false;
       }
-      
+
       this.scrollPosition = currentScrollPosition;
     }
   },
