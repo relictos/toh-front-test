@@ -172,6 +172,42 @@
         .main-menu-container{
           transition-delay: .00ms;
         }
+
+        .main-menu-logo-container, .main-menu-logo-container .mini-logo-container, .main-menu-logo-container .mini-logo-container img.main-menu-mini-logo{
+          transition: all 300ms cubic-bezier(0.165, 0.840,0.440, 1.000) 300ms, height 300ms cubic-bezier(0.165, 0.840,0.440, 1.000) .00ms;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle{
+          transition-delay: .00ms;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper{
+          transition-delay: .00ms;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle .toggle-text{
+          transition-delay: 300ms;
+        }
+
+        .left-menu-toggle-container .left-menu-lang-select{
+          transition-delay: .00ms;
+        }
+
+        .user-top-panel, .user-top-panel .user-top-dropdown{
+          transition-delay: 300ms;
+        }
+
+        .user-top-panel .user-top-panel-container .user-top-icons-container{
+          transition-delay: 300ms;
+        }
+
+        .user-top-panel .user-top-panel-container .user-top-avatar{
+          transition-delay: .00ms;
+
+          img{
+            transition-delay: .00ms;
+          }
+        }
       }
 
       .main-menu-block.minified{
@@ -185,9 +221,64 @@
           transition-delay: .00ms;
         }
 
+        .main-menu-logo-container, .main-menu-logo-container .mini-logo-container, .main-menu-logo-container .mini-logo-container img.main-menu-mini-logo{
+          height: 60px;
+          transition: all 300ms cubic-bezier(0.165, 0.840,0.440, 1.000) .00ms, height 300ms cubic-bezier(0.165, 0.840,0.440, 1.000) 300ms;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle{
+          margin-right: 0px;
+          transition-delay: 300ms;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper{
+          margin-right: 0px;
+          padding: 5px;
+          transition-delay: 300ms;
+        }
+
+        .left-menu-toggle-container .left-menu-toggle .toggle-text{
+          transition-delay: .00ms;
+          opacity: 0;
+          max-width: 0px;
+        }
+
+        .left-menu-toggle-container .left-menu-lang-select{
+          margin-top: 0px;
+          transition-delay: 300ms;
+        }
+
         .main-menu-container{
           padding: 0px;
           transition-delay: 300ms;
+        }
+
+        .user-top-panel{
+          background: none;
+          transition-delay: .00ms;
+        }
+
+        .user-top-panel .user-top-dropdown{
+          transition-delay: .00ms;
+          background: @tohDarkBg;
+        }
+
+        .user-top-panel .user-top-panel-container .user-top-icons-container{
+          opacity: 0;
+          transition-delay: .00ms;
+        }
+
+        .user-top-panel .user-top-panel-container .user-top-avatar{
+          transition-delay: 300ms;
+          margin-top: -7px;
+          height: 45px;
+          width: 45px;
+
+          img{
+            transition-delay: 300ms;
+            height: 45px;
+            width: 45px;
+          }
         }
       }
     }

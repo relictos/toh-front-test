@@ -72,6 +72,9 @@
         line-height: 35px;
         transition: .3s;
         cursor: pointer;
+        max-height: 35px;
+        overflow: hidden;
+        max-width: 100%;
     }
     
     .left-menu-toggle-container.active .toggle-icon-wrapper{
@@ -119,7 +122,7 @@
         color: fade(@tohGreyColor,50%);
         font-size: 20px;
         align-self: center;
-        margin-top: 5px;
+        margin-top: 4px;
         margin-left: 5px;
         transition: .3s;
     }
