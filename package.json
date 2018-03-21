@@ -27,6 +27,7 @@
     "axios": "^0.17.1",
     "js-cookie": "^2.2.0",
     "less-loader": "^4.0.6",
+    "npm": "^5.7.1",
     "nuxt": "^1.0.0",
     "semantic-ui-vue": "^0.1.11",
     "vform": "^0.8.2",

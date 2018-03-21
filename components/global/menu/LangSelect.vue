@@ -1,5 +1,5 @@
 <template>
-    <sui-dropdown :text="current_lang">
+    <sui-dropdown :text="current_lang" direction="downward">
         <sui-dropdown-menu>
             <nuxt-link v-for="(loc, slug) in $store.getters['lang/locales']" 
                 :key="loc.name" 

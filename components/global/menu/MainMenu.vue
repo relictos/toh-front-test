@@ -157,8 +157,8 @@
 
         .main-menu-logo-container{
           min-width: 70px;
-          max-width: 100%;
-          transition-delay: 300ms;
+          max-width: 500px;
+          transition-delay: 7000ms;
         }
 
         img.main-menu-logo{
@@ -190,7 +190,7 @@
         }
 
         .left-menu-toggle-container .left-menu-lang-select{
-          transition-delay: .00ms;
+          transition-delay: 300ms;
         }
 
         .user-top-panel, .user-top-panel .user-top-dropdown{
@@ -228,24 +228,24 @@
 
         .left-menu-toggle-container .left-menu-toggle{
           margin-right: 0px;
-          transition-delay: 300ms;
+          transition-delay: .00ms;
         }
 
         .left-menu-toggle-container .left-menu-toggle .toggle-icon-wrapper{
           margin-right: 0px;
-          padding: 5px;
-          transition-delay: 300ms;
+          padding: 0px;
+          margin: 5px;
+          transition-delay: .00ms;
         }
 
         .left-menu-toggle-container .left-menu-toggle .toggle-text{
           transition-delay: .00ms;
           opacity: 0;
-          max-width: 0px;
         }
 
         .left-menu-toggle-container .left-menu-lang-select{
-          margin-top: 0px;
-          transition-delay: 300ms;
+          opacity: 0;
+          transition-delay: .00ms;
         }
 
         .main-menu-container{
@@ -314,11 +314,12 @@ export default {
     },
     handleScroll: function(e){
       var currentScrollPosition = e.srcElement.scrollingElement.scrollTop;
+      var scrollCup = 10;
 
-      if (currentScrollPosition > this.scrollPosition) {
+      if ((currentScrollPosition > this.scrollPosition) && ((currentScrollPosition - this.scrollPosition) > scrollCup)) {
           this.minified = true;
       }
-      else{
+      if ((currentScrollPosition < this.scrollPosition) && ((this.scrollPosition - currentScrollPosition) > scrollCup)) {
           this.minified = false;
       }
 
