@@ -313,7 +313,7 @@ export default {
       this.active.reg = false;
     },
     handleScroll: function(e){
-      var currentScrollPosition = e.srcElement.scrollingElement.scrollTop;
+      var currentScrollPosition = e.srcElement.scrollTop;
       var scrollCup = 10;
 
       if ((currentScrollPosition > this.scrollPosition) && ((currentScrollPosition - this.scrollPosition) > scrollCup)) {
@@ -328,12 +328,14 @@ export default {
   },
   created () {
     if (process.browser) {
-      window.addEventListener('scroll', this.handleScroll);
+      var scrolldiv = document.getElementsByClassName("vb-content")[0];
+      scrolldiv.addEventListener('scroll', this.handleScroll);
     }
   },
   destroyed () {
     if (process.browser) {
-      window.removeEventListener('scroll', this.handleScroll);
+      var scrolldiv = document.getElementsByClassName("vb-content")[0];
+      scrolldiv.removeEventListener('scroll', this.handleScroll);
     }
   },
   components: {

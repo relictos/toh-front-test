@@ -71,6 +71,7 @@ module.exports = {
     '~plugins/axios',
     '~plugins/vform',
     '~/plugins/i18n',
+    '~/plugins/vuebar'
   ],
 
   modules: [
