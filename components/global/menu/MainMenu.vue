@@ -313,7 +313,8 @@ export default {
       this.active.reg = false;
     },
     handleScroll: function(e){
-      var currentScrollPosition = e.srcElement.scrollTop;
+      console.log(e);
+      var currentScrollPosition = (e.srcElement.scrollingElement !== undefined) ? e.srcElement.scrollingElement.scrollTop : e.srcElement.scrollTop;
       var scrollCup = 10;
 
       if ((currentScrollPosition > this.scrollPosition) && ((currentScrollPosition - this.scrollPosition) > scrollCup)) {
@@ -328,14 +329,19 @@ export default {
   },
   created () {
     if (process.browser) {
+      //for desctops with enabled custom scroll
       var scrolldiv = document.getElementsByClassName("vb-content")[0];
       scrolldiv.addEventListener('scroll', this.handleScroll);
+
+      //for mobile devices with disabled custom scroll
+      window.addEventListener('scroll', this.handleScroll);
     }
   },
   destroyed () {
     if (process.browser) {
       var scrolldiv = document.getElementsByClassName("vb-content")[0];
       scrolldiv.removeEventListener('scroll', this.handleScroll);
+      window.removeEventListener('scroll', this.handleScroll);
     }
   },
   components: {
