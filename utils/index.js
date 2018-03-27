@@ -7,7 +7,7 @@
  */
 export function cookieFromRequest (req, key) {
     if (!req.headers.cookie) {
-      return
+      return false
     }
   
     const cookie = req.headers.cookie.split(';').find(

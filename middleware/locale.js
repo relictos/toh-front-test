@@ -16,25 +16,30 @@ import { cookieFromRequest } from '~/utils'
 export default async function ({ isHMR, app, store, route, params, error, redirect, req }) {
     // If middleware is called from hot module replacement, ignore it
     if (isHMR) return
-    
-    //console.log(req)
+
     // Get locale from params
-    const locale = params.LANG || process.env.appLocale
+    const locale = params.LANG //|| process.env.appLocale
     const locales = store.getters['lang/locales']
-    console.log(locale)
-    // if(!process.SERVER_BUILD)
-    // {
-      if(!params.LANG)
+    //console.log(route.fullPath)
+     //if(!process.server)
+     //{
+      if(params.LANG == undefined || locales[params.LANG] == undefined)
       {
+        
         var fb_locale = cookieFromRequest(req, 'locale')
-        if(!fb_locale)
+        if(!fb_locale || locales[fb_locale] == undefined)
           fb_locale = process.env.appLocale
         
         if(route.fullPath.split('/')[1] == 'dist')
           return;
 
+        if(route.fullPath.split('/')[1] == '')
+        {
+          return redirect('/' + fb_locale + route.fullPath)
+        }
+
         //Чтобы не было циклического редиректа
-        if(locales[route.fullPath.split('/')[1]] !== undefined)
+        if(locales[route.fullPath.split('/')[1]] == undefined)
         {
           return error({ message: 'This pages could not be found.', statusCode: 404 })
         }

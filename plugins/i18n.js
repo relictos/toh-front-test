@@ -8,11 +8,12 @@ Vue.use(VueI18n)
 
 export default ({ app, store, params, redirect, req, route, error }) => {
 
-  const locale = params.LANG || process.env.appLocale
+  var locale = params.LANG || process.env.appLocale
   const locales = store.getters['lang/locales']
-  
+
   if (locales[locale] === undefined) {
-    return error({ message: 'This pages could not be found.', statusCode: 404 })
+    locale = process.env.appLocale
+    //return error({ message: 'This pages could not be found.', statusCode: 404 })
   }
 
   // Set locale

@@ -11,6 +11,7 @@
         123
       </h2>
       <div class="links">
+        <nuxt-link class="button--green" to="players">Players</nuxt-link>
         <a
           href="https://nuxtjs.org/"
           target="_blank"
@@ -34,16 +35,8 @@ export default {
   data() {
     return {loc: Cookies.get('locale')}
   },
-  created() {
-    if(!process.SERVER_BUILD)
-    {
-      // const loc = Cookies.get('locale')
-      // if(loc)
-      // {
-      //   this.$store.commit('lang/SET_LOCALE', loc)
-      // }
-      //Cookies.set('locale', this.$store.state.lang.locale)
-    }
+  transition: {
+      name: 'fade',
   },
   components: {
     AppLogo

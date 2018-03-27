@@ -19,6 +19,7 @@
             <right-menu 
               :activeLogin.sync="active.login" 
               :activeReg.sync="active.reg" 
+              :minified.sync="minified"
               @toggleLogin="toggleActive(active.login)"
               @toggleReg="toggleActive(active.reg)"
             >
@@ -111,7 +112,7 @@
       }
 
       .main-menu-block{
-        background: fade(@tohDarkBg, 50%);
+        background: fade(@tohDarkBg, 80%);
         transition: all 300ms cubic-bezier(0.165, 0.840,0.440, 1.000);
         *{
           transition: all 300ms cubic-bezier(0.165, 0.840,0.440, 1.000);
@@ -186,11 +187,11 @@
         }
 
         .left-menu-toggle-container .left-menu-toggle .toggle-text{
-          transition-delay: 300ms;
+          transition-delay: .00ms;
         }
 
         .left-menu-toggle-container .left-menu-lang-select{
-          transition-delay: 300ms;
+          transition-delay: .00ms;
         }
 
         .user-top-panel, .user-top-panel .user-top-dropdown{
@@ -313,7 +314,6 @@ export default {
       this.active.reg = false;
     },
     handleScroll: function(e){
-      console.log(e);
       var currentScrollPosition = (e.srcElement.scrollingElement !== undefined) ? e.srcElement.scrollingElement.scrollTop : e.srcElement.scrollTop;
       var scrollCup = 10;
 

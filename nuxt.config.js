@@ -57,21 +57,23 @@ module.exports = {
     // ]
   },
 
-  loading: { color: '#3B8070' },
+  loading: { color: '#00ABFF' },
 
   router: {
     middleware: [
       'locale', 
       'check-auth'
-    ]
+    ],
+    linkActiveClass: 'active-link',
+    linkExactActiveClass: 'exact-active-link'
   },
 
   plugins: [
     '~components/global',
     '~plugins/axios',
     '~plugins/vform',
+    '~/plugins/vuebar',
     '~/plugins/i18n',
-    '~/plugins/vuebar'
   ],
 
   modules: [

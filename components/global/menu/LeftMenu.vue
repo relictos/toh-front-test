@@ -4,9 +4,15 @@
             <div v-if="active" class="main-menu-wrapper active">
                 <div class="ui container">
                     <div class="main-menu-nav">
-                        <main-menu-item :text="$t('main.menu.home')" icon="home"></main-menu-item>
-                        <main-menu-item :text="$t('main.menu.players')" icon="gamepad" :active="true"></main-menu-item>
-                        <main-menu-item :text="$t('main.menu.teams')" icon="clan"></main-menu-item>
+                        <main-menu-item 
+                            v-for="(item, i)  in this.$store.getters['menu/main']" 
+                            @click.native="toggleMenu"
+                            :link="item.link"
+                            :text="$t(item.text)" 
+                            :icon="item.icon"
+                            :exact="item.exact"
+                            :key="i">
+                        </main-menu-item>
                     </div>
                 </div>
             </div>
@@ -16,11 +22,15 @@
                 <span class="toggle-icon-wrapper">
                     <i class="icon-inline bars toggle-icon"></i> 
                 </span>
-                <span class="toggle-text">{{$t('main.menu.title')}}</span>
+                <transition name="fade">
+                    <span v-if="!active" class="toggle-text">{{$t('main.menu.title')}}</span>
+                </transition>
             </div>
-            <div class="left-menu-lang-select">
-                <lang-select></lang-select>
-            </div>
+            <transition name="fade">
+                <div v-if="!active" class="left-menu-lang-select">
+                    <lang-select></lang-select>
+                </div>
+            </transition>
         </div>
     </div>
 </template>
@@ -143,6 +153,7 @@
 
     .left-menu-toggle-container .left-menu-lang-select .ui.dropdown>.dropdown.icon{
         margin-left: .5em;
+        transition: none;
     }
 
     .left-menu-toggle-container .left-menu-lang-select .ui.dropdown>.text{
@@ -224,19 +235,19 @@
       padding-left: 15%;
     }
 
-    .main-menu-nav .nav-item.active .nav-item-icon-container .icon-inline{
+    .main-menu-nav .nav-item.active-link .nav-item-icon-container .icon-inline{
       background-color: @tohPrimaryColor;
     }
 
-    .main-menu-nav .nav-item.active:hover .nav-item-icon-container .icon-inline{
+    .main-menu-nav .nav-item.active-link:hover .nav-item-icon-container .icon-inline{
         background-color: @tohPrimaryHover
     }
 
-    .main-menu-nav .nav-item.active .nav-item-text{
+    .main-menu-nav .nav-item.active-link .nav-item-text{
       color: @tohPrimaryColor;
     }
 
-    .main-menu-nav .nav-item.active:hover .nav-item-text{
+    .main-menu-nav .nav-item.active-link:hover .nav-item-text{
       color: @tohPrimaryHover;
     }
 
@@ -271,7 +282,7 @@
             border-bottom: 1px solid @tohLightGreyColor;
         }
 
-        .main-menu-nav .nav-item.active{
+        .main-menu-nav .nav-item.active-link{
             border-bottom-color: @tohLightPrimaryColor;
         }
 

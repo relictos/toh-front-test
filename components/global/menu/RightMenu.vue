@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div v-else class="right-menu-container" key="authed">
-                <user-widget :active="activeLogin" @dropdown="toggleLogin" @logout="toggleLogin"></user-widget>
+                <user-widget :active="activeLogin" :minified="minified" @dropdown="toggleLogin" @logout="toggleLogin"></user-widget>
             </div>
         </transition>
     </div>
@@ -85,7 +85,7 @@
     
     export default {
         name: 'RightMenu',
-        props: ['activeLogin','activeReg'],
+        props: ['activeLogin','activeReg', 'minified'],
         computed: {
             logged_in() {
                 return this.$store.getters['auth/check']

@@ -1,7 +1,7 @@
 <template>
     <div class="user-top-panel">
         <div class="user-top-panel-container">
-            <div class="user-top-icons-container">
+            <div class="user-top-icons-container" :class="{'minified': minified}">
                 <div class="user-top-action-icons">
                     <div class="user-top-icon">
                         <i class="icon-inline gamepad"></i>
@@ -76,6 +76,7 @@
     .user-top-panel .user-top-panel-container{
         flex-direction: column;
         justify-content: center;
+        transition: .3s;
 
         display: flex;
         flex-flow: row nowrap;
@@ -371,8 +372,13 @@
             left: 0px;
             right: 0px;
             background: @tohDarkText;
+            border-top: 1px solid @tohDarkBg;
             padding: 5px 0px;
             z-index: 1000;
+
+            &.minified{
+                bottom: -50px;
+            }
         }
 
         .user-top-panel .user-top-panel-container .user-top-action-icons{
@@ -474,7 +480,7 @@ import UserMenuItem from '~/components/global/menu/UserMenuItem'
 
 export default {
   name: 'UserWidget',
-  props: ['active'],
+  props: ['active', 'minified'],
   methods: {
     toggleDropdown() {
         this.$emit('dropdown')
