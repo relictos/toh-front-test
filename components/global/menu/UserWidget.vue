@@ -418,7 +418,7 @@
             color: @tohLightText;
             position: fixed;
             bottom: 0px;
-            top: 120px;
+            top: 75px;
             overflow-y: auto;
         }
 

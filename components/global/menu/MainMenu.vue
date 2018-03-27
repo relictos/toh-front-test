@@ -107,7 +107,7 @@
         color: @tohLightText;
         position: fixed;
         bottom: 0px;
-        top: 120px;
+        top: 75px;
         overflow-y: auto;
       }
 
@@ -119,11 +119,23 @@
         }
 
         +*{
-          margin-top: 142px;
+          margin-top: 85px;
         }
 
         &.minified{
           top: -120px;
+        }
+
+        .main-menu-container{
+          padding: 5px 0px;
+        }
+
+        .main-menu-logo-container{
+          text-align: center;
+        }
+
+        img.main-menu-logo{
+          max-width: 130px;
         }
       }
     }
