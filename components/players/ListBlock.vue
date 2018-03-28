@@ -86,7 +86,7 @@ export default {
         font-size: 15px;
 
         .icon-inline{
-            background-color: fade(@tohLightGreyColor, 40%);
+            background-color: @tohShadow;
         }
     }
 </style>
