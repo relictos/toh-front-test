@@ -2,15 +2,20 @@
   <div class="toh-panel hoverable">
     <div class="player-list-block">
         <div class="player-list-image-block">
-            <img src="https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000001644.png">
+            <img :src="rec.image">
             <div class="game-icon">
-                <i class="icon-inline wow"></i>
+                <i class="icon-inline" :class="[rec.game]"></i>
             </div>
         </div>
         <div class="player-list-content">
-            <div class="player-name">Player #1</div>
-            <div class="player-details">Европа / Ищу группу / PC</div>
-            <div class="player-textline">Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.</div>
+            <div class="player-name">{{rec.title}}</div>
+            <div class="player-details">
+                <span v-for="(det, i) in rec.details" :key="i" :class="{'primary': det.primary}">
+                    <i v-if="det.icon != undefined" class="icon-inline" :class="det.icon.class"></i>
+                    {{(det.trans == true) ? $t(det.trans_group + '.' + det.value) : det.value}}
+                </span>
+            </div>
+            <div class="player-textline">{{rec.mini_desc}}</div>
         </div>
         <div class="player-list-arrow">
             <i class="icon-inline chevron-right"></i>
@@ -21,7 +26,11 @@
 
 <script>
 export default {
-  name: 'ListBlock'
+  name: 'ListBlock',
+  props: ['rec'],
+  methods: {
+
+  }
 }
 </script>
 
@@ -62,14 +71,22 @@ export default {
             color: @tohLightText;
             font-weight: bold;
             line-height: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .player-details{
             color: @tohLightGreyColor;
             font-size: 14px;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
             line-height: 17px;
+
+            >span{
+                margin-right: 10px;
+
+                &.primary{
+                    color: @tohPrimaryHover;
+                }
+            }
         }
 
         .player-textline{

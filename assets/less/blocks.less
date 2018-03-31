@@ -3,7 +3,7 @@
     box-shadow: 0 0px 1px @tohShadow;
     padding: 15px;
     margin-bottom: 20px;
-    transition: .3s;
+    transition: all .3s;
     
     &.hoverable{
         cursor: pointer;
@@ -21,8 +21,10 @@
             transition: all .3s;
             max-width: 0px;
         }
-        &:hover:before{
-            max-width: 100%;
+        &:hover{
+            &:before{
+                max-width: 100%;
+            }
         }
 
         *{

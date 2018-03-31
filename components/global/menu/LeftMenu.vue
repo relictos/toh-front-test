@@ -279,7 +279,7 @@
             width: 100%;
             padding: 20px !important;
             margin-bottom: 0px;
-            border-bottom: 1px solid @tohLightGreyColor;
+            border-bottom: 1px solid fade(@tohLightGreyColor,10%);
         }
 
         .main-menu-nav .nav-item.active-link{

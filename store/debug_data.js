@@ -13,6 +13,488 @@ export const state = () => ({
             name: "relicto",
             photo_url: "https://www.gravatar.com/avatar/0a2871d93cd4927b6443506ad35dd5dc.jpg?s=200&d=mm",
             updated_at: "2018-02-13 19:18:08"
+        },
+        'players': {
+            count: 10,
+            offset: 0,
+            list: [
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 1,
+                        name: 'Relictos'
+                    },
+                    search_type: 'lfg',
+                    mini_desc: 'Тут будет мое офигенное описание, которое может растягиваться на сколько угодно, но все же не быть слишком длинным.',
+                    game: 'ow',
+                    game_data: {
+                        region: 'EU',
+                        player_name: 'Acherus',
+                        battletag: 'Player#2218',
+                        platform: 'PC',
+                        league: 4,
+                        rating: 2895,
+                        icon: 'https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000C77.png'
+                    }
+                },
+                
+            ]
         }
     },
   })

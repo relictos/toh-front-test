@@ -4,17 +4,18 @@
         <div v-if="!child_active">
             <div class="ui grid">
                 <div class="top aligned sixteen wide tablet sixteen wide mobile twelve wide computer column">
-                    <list-block v-for="i in 30" :key="i"></list-block>
+                    <nuxt-link
+                        v-for="(item, i)  in this.$store.getters['players/playerViews']" 
+                        :to="$i18n.path('players/' + item.id)" 
+                        @click.native="getScrollPos"
+                        :key="i">
+                            <list-block :rec="item"></list-block>
+                    </nuxt-link>
                 </div>
                 <div class="top aligned sixteen wide tablet sixteen wide mobile four wide computer column">
                     <div class="toh-panel"></div>
                 </div>
             </div>
-
-            <nuxt-link :to="$i18n.path('players/1')" @click.native="getScrollPos">Player1</nuxt-link>
-            <nuxt-link :to="$i18n.path('players/1')" @click.native="getScrollPos">Player1</nuxt-link>
-            <nuxt-link :to="$i18n.path('players/2')">Player2</nuxt-link>
-            <nuxt-link :to="$i18n.path('players/3')">Player3</nuxt-link>
         </div>
         <nuxt-child :key="$route.params.id"/>
   </section>
@@ -26,8 +27,12 @@ import ListBlock from '~/components/players/ListBlock.vue'
 export default {
     data() {
         return {
-            scrollTop: 0
+            scrollTop: 0,
         }
+    },
+    async fetch({ store, params }) {
+        if(store.getters['players/playersCount'] <= 0)
+            await store.dispatch('players/fetchPlayers');
     },
     computed: {
         child_active() {
@@ -38,10 +43,9 @@ export default {
     methods: {
         getScrollPos() {
             //if(this.child_active) return;
-            this.scrollTop = this.$vuebar.getState(document.body).scrollTop
+            this.scrollTop = document.getElementsByClassName('vb-content')[0].scrollTop
         }
     },
-    scrollToTop: true,
     transition: {
         name: 'fade',
     },
@@ -51,6 +55,7 @@ export default {
     created: function() {
         if(process.browser)
             document.getElementsByClassName('vb-content')[0].scrollTop = 0;
+
     },
     updated: function () {
         this.$nextTick(function () {
